@@ -1,16 +1,16 @@
 # **asp按鈕配合前端進入後端**
 
 - 程式進入點OnClientClick
-`
+```
  OnClientClick="return cancel_lost_card(this);"
-`
-`
+```
+```
  OnClientClick="return confirm('_____?');"
-`
+```
 - 因為我想做漂亮一點導入sweetalert 故使用function
 - 爬了一堆文試了很久找到這種方法，this帶入按鈕，取消事件
  
-`
+```
 	function cancel_lost_card(btn) {
 		if ($('#Status').text() === "正常") {
 			sweet_alert("狀態正常，無法取消掛失!")
@@ -25,8 +25,8 @@
 			}
 		}
 	}
-`
-`
+```
+```
 	function sweetAlertConfirm(btnDelete,msg) {
 		if (btnDelete.dataset.confirmed) {
 			btnDelete.dataset.confirmed = false;
@@ -52,6 +52,6 @@
 				});
 		}
 	}
-`
+```
 
   
