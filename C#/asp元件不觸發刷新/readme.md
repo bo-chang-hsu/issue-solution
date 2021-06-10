@@ -3,36 +3,36 @@
 
 - 使用UpdatePanel，上面要有ScriptManager
 ```
-	<%--真按鈕--%>
-	<asp:ScriptManager ID="ScriptManager1" runat="server">
-	</asp:ScriptManager>
-	<asp:UpdatePanel ID="UpdatePanel1" runat="server">
-		<ContentTemplate>
-			<asp:Button 
-				ID="btnSend" 
-				runat="server" 
-				Text="掛 失" 
-				class="login100-form-btn" 
-				OnClick="btnSend_Click"
-			/>
-		</ContentTemplate>
-	</asp:UpdatePanel>
+<%--真按鈕--%>
+<asp:ScriptManager ID="ScriptManager1" runat="server">
+</asp:ScriptManager>
+<asp:UpdatePanel ID="UpdatePanel1" runat="server">
+	<ContentTemplate>
+		<asp:Button 
+			ID="btnSend" 
+			runat="server" 
+			Text="掛 失" 
+			class="login100-form-btn" 
+			OnClick="btnSend_Click"
+		/>
+	</ContentTemplate>
+</asp:UpdatePanel>
 ```
 - 搭配假按鈕去觸發
 ```
-  <%--假按鈕--%>
-  <input 
-	type="button" 
-	value = "掛失" 
-	class="login100-form-btn" 
-	onclick = "fun_lost_card()" 
-  />
+<%--假按鈕--%>
+<input 
+type="button" 
+value = "掛失" 
+class="login100-form-btn" 
+onclick = "fun_lost_card()" 
+/>
 ```
 ```
-	function fun_lost_card() {
-		$('#btnSend').click()
-		//redirect('掛失成功。')
-	}
+function fun_lost_card() {
+	$('#btnSend').click()
+	//redirect('掛失成功。')
+}
 ```
 
 
