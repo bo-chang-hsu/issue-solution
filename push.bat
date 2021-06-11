@@ -8,5 +8,5 @@ echo time %bak_filename%
 REM timestr=$(date +"%Y-%m-%d %T")
 git add . 
 git commit -m "$bak_filename"
-git push -u origin master
+git push -u origin main
 pause
