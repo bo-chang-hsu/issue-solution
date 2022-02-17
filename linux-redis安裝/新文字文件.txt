@@ -1,0 +1,26 @@
+1.新增EPEL倉庫並更新yum源
+sudo yum install epel-release
+sudo yum update
+2.安裝Redis資料庫
+sudo yum -y install redis
+3.修改Redis配置檔案
+vi /etc/redis.conf
+
+# 修改如下
+
+#bind 127.0.0.1
+改成 0.0.0.0才能連接
+
+# 修改密碼
+requirepass pwd
+4.啟動Redis服務
+sudo systemctl start redis
+
+1.對外開放 6379 port
+firewall-cmd --zone=public --add-port=6379/tcp --permanent
+
+2.重新讀取 firewall 設定
+firewall-cmd --reload
+
+3.可以檢查是否成功加入開放清單
+firewall-cmd --zone=public --list-all

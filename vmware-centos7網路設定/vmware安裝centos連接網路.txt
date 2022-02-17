@@ -1,0 +1,8 @@
+1
+2
+3
+4
+
+cd /etc/sysconfig/network-scripts/
+vi ifcfg-_____ (你的網路名稱)
+
